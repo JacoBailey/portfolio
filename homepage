@@ -1,15 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Homepage</title>
+	<title>Homepage | Jacob Bailey Portfolio</title>
+
+    <meta name="robots" content="noindex">
+
 </head>
 <body>
-    
+
+<!-- Page Title and Header -->
+
 <header>
-	<h1>Homepage</h1>
+	<h1>Homepage  | Jacob Bailey Portfolio</h1>
 </header>
+
+<!-- Top Navigation Menu -->
+
+<div>
+    <ul>
+        
+        <a href="" title="Homepage">
+            <li>Home</li>
+        </a>
+
+        <a href="" title="Homepage">
+            <li>Projects</li>
+        </a>
+
+        <a href="" title="Homepage">
+            <li>Github</li>
+        </a>
+
+        <a href="" title="Homepage">
+            <li>Contact</li>
+        </a>
+
+        <a href="" title="Homepage">
+            <li>Resume</li>
+        </a>
+
+    </ul>
+</div>
+
+<!-- Main Body -->
+
+<div>
+
+<!-- Projects -->
+
+    <div>
+
+        <h2>Projects</h2>
+    
+        <h3>Project Name 1</h3>
+        <p>Project Description</p>
+        <ul>
+            <li>Technical Bullet</li>
+            <!-- Repeat as needed -->
+        </ul> 
+        
+        <h3>Project Name 2</h3>
+        <p>Project Description</p>
+        <ul>
+            <li>Technical Bullet</li>
+            <!-- Repeat as needed -->
+        </ul>    
+
+        <h3>Project Name 3</h3>
+        <p>Project Description</p>
+        <ul>
+            <li>Technical Bullet</li>
+            <!-- Repeat as needed -->
+        </ul> 
+        
+        <h3>Project Name 4</h3>
+        <p>Project Description</p>
+        <ul>
+            <li>Technical Bullet</li>
+            <!-- Repeat as needed -->
+        </ul>    
+
+    </div>
+
+    <!-- Technical Skills -->
+
+    <div>
+        <h2>Technical Skills</h2>
+        <p>Languages: Python, Javascript, HTML, CSS</p>
+        <p>Agile: Atlassian (JIRA, Confluence), Kanban</p>
+        <p>Relational Databases: SQL, PostgreSQL, Alembic (database migration), SQLAlchemy (ORM / object relational mapping)</p>
+        <p>CI/CD: Husky (pre-commit hook),</p>
+        <p>Version Control: Git, Github</p>
+        <p>API Building: FastAPI</p>
+        <p>Authentication + Access Managment: ...</p>
+        <p>Testing: Pytest</p>
+        <p>Logging + Monitoring: Loguru, Sentry</p>
+        <p>Virtual Environment: Poetry</p>
+        <p>Asynchronous Programming: ...</p>
+        <p>Caching + Task Queueing: Redis, Celery</p>
+        <p>Containerization: Docker (Compose, Swarm)</p>
+        <p>Search Engine: Elasticsearch</p>
+        <p>Tech Stacks: Python Web APIs, Microservices</p>
+        <p>Additional: Skills: OOP (Object Oriented Programming), Regex (Regular Expressions), API Development, ... (Secrets Management), ... (Admin Panel)</p>
+    </div>
+
+    <!-- Experience -->
+
+    <div>
+        <h2>Experience</h2>
+
+        <h3>Technical SEO Analyst</h3>
+        <p>Torrid</p>
+        <p><i>October 2021 - Present</i></p>
+        <ul>
+            <li>Optimized workflows with various python scripts for both an AI-based web-automation tool and a tool for formatting data at scale, improving task efficiency by over 90%</li>
+            <li>Developed JSON schema structure in accordance with Schema.org documentation standards to reduce Google product and shopping errors by 40,000+ combined</li>
+            <li>Regularly participates in agile track including grooming meetings, sprint work, and pre-release UAT</li>
+            <li>Designed and executed regular large-scale website crawls and specialized crawls for frontend data extraction using site crawling tools by SEO Clarity and Screaming Frog SEO Spyder</li>
+            <li>Created and managed 300+ front-end HTML/CSS content containers</li>
+        </ul>
+
+    </div>
+
+
+
+</div>
 
 </body>
 </html>
