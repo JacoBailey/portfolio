@@ -50,9 +50,11 @@
 
 <h1>Homepage</h1>
 
-<!-- Projects -->
+<section>
 
-    <div>
+    <!-- Projects -->
+
+    <section>
 
         <h2>Projects</h2>
     
@@ -84,12 +86,13 @@
             <!-- Repeat as needed -->
         </ul>    
 
-    </div>
+    </section>
 
     <!-- Technical Skills -->
 
-    <div>
+    <section>
         <h2>Technical Skills</h2>
+
         <p>Languages: Python, Javascript, HTML, CSS</p>
         <p>Agile: Atlassian (JIRA, Confluence), Kanban</p>
         <p>Relational Databases: SQL, PostgreSQL, Alembic (database migration), SQLAlchemy (ORM / object relational mapping)</p>
@@ -106,11 +109,12 @@
         <p>Search Engine: Elasticsearch</p>
         <p>Tech Stacks: Python Web APIs, Microservices</p>
         <p>Additional: Skills: OOP (Object Oriented Programming), Regex (Regular Expressions), API Development, ... (Secrets Management), ... (Admin Panel)</p>
-    </div>
+    </section>
 
     <!-- Experience -->
 
-    <div>
+    <section>
+        
         <h2>Experience</h2>
 
         <h3>Technical SEO Analyst</h3>
@@ -124,11 +128,9 @@
             <li>Created and managed 300+ front-end HTML/CSS content containers</li>
         </ul>
 
-    </div>
+    </section>
 
-
-
-</div>
+</section>
 
 </body>
 </html>
