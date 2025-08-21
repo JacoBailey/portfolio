@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact | Jacob Bailey Portfolio</title> <!-- Update this -->
+
+    <meta name="robots" content="noindex">
+
+    <!-- Devicons Stylesheet for Tech Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+
+</head>
+<body>
+
+
+<!-- Page Header -->
+
+<header>
+    <h2>Jacob Bailey</h2>
+    <h3>Python Backend Services | APIs, Microservices</h3>
+</header>
+
+<!-- Top Navigation Menu -->
+
+<nav>
+    <ul>
+        
+        <a href="" title="Homepage">
+            <li>Home</li>
+        </a>
+
+        <a href="" title="Projects">
+            <li>Projects</li>
+        </a>
+
+        <a href="" title="Github">
+            <li><a href="https://github.com/JacoBailey">Github</a></li>
+        </a>
+
+        <a href="" title="Contact">
+            <li>Contact</li>
+        </a>
+
+        <a href="" title="Resume">
+            <li><a href="..." download>Resume</a></li>
+        </a>
+
+    </ul>
+</nav>
+
+<!-- Main Body -->
+
+<h1>Contact</h1>
+
+<section>
+        
+        <p>Jacob Bailey</p>
+        <p>Python Backend Developer | APIs, Microservices</p>
+        
+        <p>Location: Los Angeles, CA</p>
+
+        <p>LinkedIn: 
+            <a href="https://www.linkedin.com/in/jacobailey/">Click Here</a>
+        </p>
+        
+        <p>Email: 
+            <span id="email-addresss">jacobrbailey@icloud.com
+            </span>
+        </p>
+        <a href="mailto:jacobrbailey@icloud.com">Email me</a>
+        <button onlcick="navigator.clipboard.writeText(document.getElementById('email-addresss').innerText)">Copy Email</button>
+
+        <p>Phone: 
+            <span id="phone-number">+1 (209) 256-2509</span>
+        </p>
+        <a href="tel:+12092562509">Call me</a>
+        <button onlcick="navigator.clipboard.writeText(document.getElementById('phone-number').innerText)">Copy Number</button>
+
+</section>
+
+</body>
+</html>
