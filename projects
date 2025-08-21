@@ -11,6 +11,13 @@
 </head>
 <body>
 
+<!-- Page Header -->
+
+<header>
+    <h2>Jacob Bailey</h2>
+    <h3>Python Backend Services | APIs, Microservices</h3>
+</header>
+
 <!-- Top Navigation Menu -->
 
 <nav>
@@ -25,7 +32,7 @@
         </a>
 
         <a href="" title="Github">
-            <li>Github</li>
+            <li><a href="https://github.com/JacoBailey">Github</a></li>
         </a>
 
         <a href="" title="Contact">
@@ -33,21 +40,17 @@
         </a>
 
         <a href="" title="Resume">
-            <li>Resume</li>
+            <li><a href="..." download>Resume</a></li>
         </a>
 
     </ul>
 </nav>
 
-<!-- Page Title and Header -->
-
-<header>
-	<h1>Projects</h1>
-</header>
-
-<!-- Projects -->
+<!-- Main Body -->
 
 <section>
+
+        <h1>Projects</h1>
 
         <!-- Projects + Links to Project Pages -->
         <a href="..."><h2>Project Name 1</h2></a> <!-- Anchor is optional for link to live site -->

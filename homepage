@@ -11,43 +11,44 @@
 </head>
 <body>
 
-<!-- Page Title and Header -->
+<!-- Page Header -->
 
 <header>
-	<h1>Homepage  | Jacob Bailey Portfolio</h1>
+    <h2>Jacob Bailey</h2>
+    <h3>Python Backend Services | APIs, Microservices</h3>
 </header>
 
 <!-- Top Navigation Menu -->
 
-<div>
+<nav>
     <ul>
         
         <a href="" title="Homepage">
             <li>Home</li>
         </a>
 
-        <a href="" title="Homepage">
+        <a href="" title="Projects">
             <li>Projects</li>
         </a>
 
-        <a href="" title="Homepage">
-            <li>Github</li>
+        <a href="" title="Github">
+            <li><a href="https://github.com/JacoBailey">Github</a></li>
         </a>
 
-        <a href="" title="Homepage">
+        <a href="" title="Contact">
             <li>Contact</li>
         </a>
 
-        <a href="" title="Homepage">
-            <li>Resume</li>
+        <a href="" title="Resume">
+            <li><a href="..." download>Resume</a></li>
         </a>
 
     </ul>
-</div>
+</nav>
 
 <!-- Main Body -->
 
-<div>
+<h1>Homepage</h1>
 
 <!-- Projects -->
 
