@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 import os
 
 # Save database url
-DATABASE_URL = os.getenv("PORTFOLIO_DATABASE_URL")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Create ORM engine for python db connections
 engine = create_engine(DATABASE_URL, echo=False)
