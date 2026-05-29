@@ -5,6 +5,7 @@
 .DS_store
 .gitignore.swp
 node_modules/
+logs/
 
 ##################################
 

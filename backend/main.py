@@ -3,7 +3,10 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 from pathlib import Path
-
+from loguru import logger
+from time import time
+from sqladmin import Admin, ModelView
+import os
 from database import get_db, engine
 from models import Project, ProjectBullet, Experience, ExperienceBullet, TechnicalSkill, TechnicalBullet
 from schemas import TechnicalSkillRead, ProjectRead, ExperienceRead
@@ -11,11 +14,10 @@ from schemas import TechnicalSkillRead, ProjectRead, ExperienceRead
 
 # Establish FastAPI application object instance
 app = FastAPI()
+logger.info("Portfolio API started.")
 
 
-# SQLAdmin (dev only)
-import os
-from sqladmin import Admin, ModelView
+# SQLAdmin Config (dev only)
 class TechnicalSkillAdmin(ModelView, model = TechnicalSkill):
     column_list = [
         TechnicalSkill.id,
@@ -61,14 +63,25 @@ class ExperienceBulletAdmin(ModelView, model = ExperienceBullet):
         ExperienceBullet.order_index
     ]
 
-if os.getenv("ENVIRONMENT") == "development":
-    admin = Admin(app, engine)
-    admin.add_view(TechnicalSkillAdmin)
-    admin.add_view(TechnicalBulletAdmin)
-    admin.add_view(ProjectAdmin)
-    admin.add_view(ProjectBulletAdmin)
-    admin.add_view(ExperienceAdmin)
-    admin.add_view(ExperienceBulletAdmin)
+
+# SQLAdmin Activation
+environment = os.getenv('ENVIRONMENT')
+if environment is None:
+    raise EnvironmentError("No environment env variable found")
+logger.info(f"Environment: {environment}")
+if environment == 'development':
+    try:
+        admin = Admin(app, engine)
+        logger.info("SQLAdmin enabled (development mode)")
+        admin.add_view(TechnicalSkillAdmin)
+        admin.add_view(TechnicalBulletAdmin)
+        admin.add_view(ProjectAdmin)
+        admin.add_view(ProjectBulletAdmin)
+        admin.add_view(ExperienceAdmin)
+        admin.add_view(ExperienceBulletAdmin)
+    except Exception:
+        logger.exception("Failed to initialize SQLAdmin")
+        raise
 
 
 # Save program root dir path to var
@@ -76,7 +89,8 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 
 
 # Mount directory site files
-app.mount("/static", StaticFiles(directory=str(ROOT_DIR / "frontend")), name="static")
+app.mount("/static", StaticFiles(directory=str(ROOT_DIR / 'frontend')), name="static")
+logger.info(f"Static files mounted at /static from {ROOT_DIR / 'frontend'}")
 
 
 # Webpage routing: returns static (or dynamic) webpages
@@ -108,15 +122,36 @@ def projects_portfolio():
 # Database connection routing: returns JSON from db for each request
 @app.get("/api/skills/", response_model=list[TechnicalSkillRead])
 def get_skills(db:Session = Depends(get_db)):
-    skills = db.query(TechnicalSkill).all()
-    return skills
+    start = time()
+    try:
+        skills = db.query(TechnicalSkill).all()
+        duration = time() - start
+        logger.info(f"GET /api/skills/ returned {len(skills)} rows in {duration:.4f}s")
+        return skills
+    except Exception:
+        logger.exception("GET /api/skills/ failed")
+        raise
 
 @app.get("/api/projects/", response_model=list[ProjectRead])
 def get_projects(db:Session = Depends(get_db)):
-    projects = db.query(Project).all()
-    return projects
+    start = time()
+    try:
+        projects = db.query(Project).all()
+        duration = time() - start
+        logger.info(f"GET /api/projects/ returned {len(projects)} rows in {duration:.4f}s")
+        return projects
+    except Exception:
+        logger.exception("GET /api/projects/ failed")
+        raise
 
 @app.get("/api/experience/", response_model=list[ExperienceRead])
 def get_experience(db:Session = Depends(get_db)):
-    experience = db.query(Experience).all()
-    return experience
+    start = time()
+    try:
+        experience = db.query(Experience).all()
+        duration = time() - start
+        logger.info(f"GET /api/experience/ returned {len(experience)} rows in {duration:.4f}s")
+        return experience
+    except Exception:
+        logger.exception("GET /api/experience/ failed")
+        raise
