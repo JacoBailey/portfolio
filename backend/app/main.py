@@ -3,14 +3,16 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 from pathlib import Path
-from loguru import logger
 from time import time
 from sqladmin import Admin, ModelView
 import os
-from database import get_db, engine
-from models import Project, ProjectBullet, Experience, ExperienceBullet, TechnicalSkill, TechnicalBullet
-from schemas import TechnicalSkillRead, ProjectRead, ExperienceRead
+from app.core.logger import logger
+from app.database import get_db, engine
+from app.models import Project, ProjectBullet, Experience, ExperienceBullet, TechnicalSkill, TechnicalBullet
+from app.schemas import TechnicalSkillRead, ProjectRead, ExperienceRead
 
+# Save program root dir path to var
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Establish FastAPI application object instance
 app = FastAPI()
@@ -82,10 +84,6 @@ if environment == 'development':
     except Exception:
         logger.exception("Failed to initialize SQLAdmin")
         raise
-
-
-# Save program root dir path to var
-ROOT_DIR = Path(__file__).resolve().parent.parent
 
 
 # Mount directory site files
