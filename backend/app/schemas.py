@@ -11,7 +11,6 @@ class BulletRead(ORMBaseModel):
     text: str
     order_index: int
 
-
 # Technical Skills
 
 class TechnicalBulletRead(BulletRead):
