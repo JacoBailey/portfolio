@@ -1,64 +1,49 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
-#Technical Skills
+# Establish base classes
 
-class TechnicalBulletRead(BaseModel):
+class ORMBaseModel(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+class BulletRead(ORMBaseModel):
     id: int
     text: str
     order_index: int
 
-    class Config:
-        from_attributes = True
 
-class TechnicalSkillRead(BaseModel):
+# Technical Skills
+
+class TechnicalBulletRead(BulletRead):
+    pass
+
+class TechnicalSkillRead(ORMBaseModel):
     name: str
     id: int
     bullets: list[TechnicalBulletRead]
 
-    class Config:
-        from_attributes = True
-
 
 # Projects
 
-class ProjectBulletRead(BaseModel):
-    id: int
+class ProjectBulletRead(BulletRead):
     project_id: int
-    text: str
-    order_index: int
 
-    class Config:
-        from_attributes = True
-
-class ProjectRead(BaseModel):
+class ProjectRead(ORMBaseModel):
     id: int
     name: str
     description: str
     bullets: list[ProjectBulletRead]
 
-    class Config:
-        from_attributes = True
-
 
 # Experience
 
-class ExperienceBulletRead(BaseModel):
-    id: int
+class ExperienceBulletRead(BulletRead):
     experience_id: int
-    text: str
-    order_index: int
 
-    class Config:
-        from_attributes = True
-
-class ExperienceRead(BaseModel):
+class ExperienceRead(ORMBaseModel):
     id: int
     role: str
     company: str
     start_date: str
     end_date: str
     bullets: list[ExperienceBulletRead]
-
-    class Config:
-        from_attributes = True
