@@ -1,15 +1,21 @@
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, Request
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import (
+    IntegrityError,
+    OperationalError,
+    SQLAlchemyError,)
 from pathlib import Path
-from time import time
 from sqladmin import Admin, ModelView
 import os
 from app.core.logger import logger
 from app.database import get_db, engine
 from app.models import Project, ProjectBullet, Experience, ExperienceBullet, TechnicalSkill, TechnicalBullet
 from app.schemas import TechnicalSkillRead, ProjectRead, ExperienceRead
+from app.services.technical_skills_service import get_skills_service
+from app.services.experiences_service import get_experiences_service
+from app.services.projects_service import get_projects_service
 
 # Save program root dir path to var
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
@@ -17,7 +23,6 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 # Establish FastAPI application object instance
 app = FastAPI()
 logger.info("Portfolio API started.")
-
 
 # SQLAdmin Config (dev only)
 class TechnicalSkillAdmin(ModelView, model = TechnicalSkill):
@@ -86,6 +91,23 @@ if environment == 'development':
         raise
 
 
+# Global exception handlers
+@app.exception_handler(IntegrityError)
+async def integrity_error_handler(request: Request, exc: IntegrityError):
+    logger.exception(f"Database integrity error at {request.url.path}")
+    return JSONResponse(status_code=409, content={"detail": "constraint violation"})
+
+@app.exception_handler(OperationalError)
+async def operational_error_handler(request: Request, exc: OperationalError):
+    logger.exception(f"Database unavailable at {request.url.path}")
+    return JSONResponse(status_code=503, content={"detail": "database unavailable"})
+
+@app.exception_handler(SQLAlchemyError)
+async def sqlalchemy_error_handler(request: Request, exc: SQLAlchemyError):
+    logger.exception(f"Database error at {request.url.path}")
+    return JSONResponse(status_code=500, content={"detail": "database error"})
+
+
 # Mount directory site files
 app.mount("/static", StaticFiles(directory=str(ROOT_DIR / 'frontend')), name="static")
 logger.info(f"Static files mounted at /static from {ROOT_DIR / 'frontend'}")
@@ -120,36 +142,12 @@ def projects_portfolio():
 # Database connection routing: returns JSON from db for each request
 @app.get("/api/skills/", response_model=list[TechnicalSkillRead])
 def get_skills(db:Session = Depends(get_db)):
-    start = time()
-    try:
-        skills = db.query(TechnicalSkill).all()
-        duration = time() - start
-        logger.info(f"GET /api/skills/ returned {len(skills)} rows in {duration:.4f}s")
-        return skills
-    except Exception:
-        logger.exception("GET /api/skills/ failed")
-        raise
+    return get_skills_service(db)
 
 @app.get("/api/projects/", response_model=list[ProjectRead])
 def get_projects(db:Session = Depends(get_db)):
-    start = time()
-    try:
-        projects = db.query(Project).all()
-        duration = time() - start
-        logger.info(f"GET /api/projects/ returned {len(projects)} rows in {duration:.4f}s")
-        return projects
-    except Exception:
-        logger.exception("GET /api/projects/ failed")
-        raise
+    return get_projects_service(db)
 
 @app.get("/api/experience/", response_model=list[ExperienceRead])
-def get_experience(db:Session = Depends(get_db)):
-    start = time()
-    try:
-        experience = db.query(Experience).all()
-        duration = time() - start
-        logger.info(f"GET /api/experience/ returned {len(experience)} rows in {duration:.4f}s")
-        return experience
-    except Exception:
-        logger.exception("GET /api/experience/ failed")
-        raise
+def get_experiences(db:Session = Depends(get_db)):
+   return get_experiences_service(db)
