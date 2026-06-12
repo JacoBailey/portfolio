@@ -4,8 +4,9 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>PROJECT NAME | Jacob Bailey Portfolio</title> <!-- Update this -->
-    <meta name="description" content="...">
+	<title>Text Formatter | Jacob Bailey Portfolio</title> <!-- Update this -->
+    <meta name="description" content="A convenient bundle of text formatting tools.">
+
 
     <meta name="robots" content="noindex">
 
@@ -20,7 +21,7 @@
 
 <header>
     <h2>Jacob Bailey</h2>
-    <h3>Python Backend Services | APIs, Microservices</h3>
+    <h3>Backend Developer | Python, FastAPI, PostgreSQL”</h3>
 </header>
 
 <!-- Top Navigation Menu -->
@@ -44,63 +45,60 @@
             <li>Contact</li>
         </a>
 
-        <a href="/static/downloads/_____" download="Resume.pdf" title="Download Resume PDF">
-            <li>>Resume</li>
+        <a href="/resume/" title="Resume">
+            <li>Resume</li>
         </a>
 
     </ul>
 </nav>
 
-
 <!-- Main Body -->
-
-<h1>PROJECT NAME</h1>
 
 <section>
 
         <!-- Title, Tagline, Links, Description -->
-        <p>Tagline</p>
+        <h1>Text Formatter</h1>
+        <p>A convenient bundle of text formatting tools.</p>
         <a href="https://github.com/JacoBailey/formatter">Github Repository</a>
-        <p>Main description of project. (Problem it solves, what makes it interesting/unique,etc.). Make it both narrative and technical.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.<br><br>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.<br><br>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.<br></p>
-        <img src="..." alt="..." width="560" height="315">
-        <iframe src="..." width="560" height="315" muted controls loop autoplay></iframe>
+        <br>
+        <br>
+        <img src="/assets/images/Text_Formatter.png" alt="..." width="560" height="315">
+        <!-- Code for videos <iframe src="..." width="560" height="315" muted controls loop autoplay></iframe> -->
+        <p>The “Text Formatter” tool is a modular text-processing utility that provides multiple modes for transforming and formatting text-based string data. The project began as a small script for prepending text to a list of strings (used to format data prior to uploading it to a SaaS platform). Over time, I built additional utilities, including a template-filling tool for structured text generation. As these tools became more related in purpose, I merged them into a single unified program. As my needs evolved, I expanded the project with additional functionality, including modes for regex-based single replacement and multiple replacement string transformations. To support the growing feature set, I refactored the codebase into a modular architecture, consisting of a base program file and separate files for each mode. This refined structure greatly improved maintainability and made it significantly easier to extend functionality with minimal integration overhead.<br></p>
         
         <hr>
 
         <!-- Bullets -->
 
+        <h3><b>Architecture Highlights</b></h3>
+        <ul>
+            <li>Refactored initial monolithic script into a modular architecture separating core logic and individual formatting modes</li>
+            <li>Designed each formatting mode as an isolated module to improve maintainability and reduce coupling</li>
+            <li>Structured system to allow new transformation modes to be added with minimal changes to existing logic</li>
+        </ul>
+
         <h3><b>Key Features</b></h3>
         <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-            <li>Etc...</li>
+            <li>Format List — Adds a custom prefix or suffix to each item in a list</li>
+            <li>Fill Template — Fills out custom text-based templates with user-defined values</li>
+            <li>Regex Single Replacement — Uses a regex pattern to replace matches in a single string</li>
+            <li>Regex Multiple Replacement — Applies multiple sequential regex replacements to a single string</li>
         </ul>
-
-        <hr>
-
-        <h3><b>Learning Takeaways</b></h3>
-        <ul>
-            <li>Takeaway 1</li>
-            <li>Takeaway 2</li>
-            <li>Takeaway 3</li>
-            <li>Etc...</li>
-        </ul>
-        <h3><b>Technical Challenges</b></h3>
-        <ul>
-            <li>Challenge 1</li>
-            <li>Challenge 2</li>
-            <li>Challenge 3</li>
-            <li>Etc...</li>
-        </ul>
-
-        <hr>
 
         <h3><b>Tech Stack</b></h3>
         <ul class="tech-stack">
             <li><span class="devicon-python-plain colored"></span> Python</li>
-            <li><span class="..."></span>...</li>
+            <ul>
+                <li><span class="...">Regex <i>(re module)</i></span></li>
+            </ul>
+        </ul>
+
+        <h3><b>Technical Challenges & Lessons Learned</b></h3>
+        <ul>
+            <li><b>Monolith Architecture Scaling Issues</b></li>
+                <ul>
+                    <li>As I introduced new modes, my codebase slowly evolved into a large, difficult to maintain, monolith. This made it increasingly difficult to maintain and extend the program. To address this, I refactored the system into a modular architecture, consisting of shared base program file and separate modules for each formatting mode. This restructuring significantly improved maintainability and allowed new functionality to be added without modifying existing core logic.</li>
+                </ul>
         </ul>
 
 </section>

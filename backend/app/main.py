@@ -108,9 +108,9 @@ async def sqlalchemy_error_handler(request: Request, exc: SQLAlchemyError):
     return JSONResponse(status_code=500, content={"detail": "database error"})
 
 
-# Mount directory site files
-app.mount("/static", StaticFiles(directory=str(ROOT_DIR / 'frontend')), name="static")
-logger.info(f"Static files mounted at /static from {ROOT_DIR / 'frontend'}")
+# Mount static assets
+app.mount("/assets", StaticFiles(directory=str(ROOT_DIR / 'backend/static')), name="assets")
+logger.info(f"Assets mounted at /assets from {ROOT_DIR / 'backend/static'}")
 
 
 # Webpage routing: returns static (or dynamic) webpages
@@ -121,6 +121,10 @@ def homepage():
 @app.get("/contact/")
 def contact():
     return FileResponse(ROOT_DIR / "frontend/pages/contact/index.html")
+
+@app.get("/resume/")
+def resume():
+    return FileResponse(ROOT_DIR / "frontend/pages/resume/index.html")
 
 @app.get("/projects/")
 def projects():
@@ -137,6 +141,10 @@ def projects_textformatter():
 @app.get("/projects/portfolio/")
 def projects_portfolio():
     return FileResponse(ROOT_DIR / "frontend/pages/projects/portfolio/index.html")
+
+@app.get("/projects/shredfinder/")
+def projects_shredfinder():
+    return FileResponse(ROOT_DIR / "frontend/pages/projects/shredfinder/index.html")
 
 
 # Database connection routing: returns JSON from db for each request

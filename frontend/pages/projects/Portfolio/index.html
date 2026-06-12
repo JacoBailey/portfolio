@@ -4,8 +4,8 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>PROJECT NAME | Jacob Bailey Portfolio</title> <!-- Update this -->
-    <meta name="description" content="...">
+	<title>Portfolio | Jacob Bailey Portfolio</title> <!-- Update this -->
+    <meta name="description" content="A portfolio built as a backend system, not just a website.">
 
 
     <meta name="robots" content="noindex">
@@ -21,7 +21,7 @@
 
 <header>
     <h2>Jacob Bailey</h2>
-    <h3>Python Backend Services | APIs, Microservices</h3>
+    <h3>Backend Developer | Python, FastAPI, PostgreSQL”</h3>
 </header>
 
 <!-- Top Navigation Menu -->
@@ -45,65 +45,82 @@
             <li>Contact</li>
         </a>
 
-        <a href="/static/downloads/_____" download="Resume.pdf" title="Download Resume PDF">
-            <li>>Resume</li>
+        <a href="/resume/" title="Resume">
+            <li>Resume</li>
         </a>
 
     </ul>
 </nav>
 
-
 <!-- Main Body -->
-
-<h1>PROJECT NAME</h1>
 
 <section>
 
         <!-- Title, Tagline, Links, Description -->
-        <p>Tagline</p>
-        <a href="...">Github Repository</a>
-        <a href="...">Website Link (if Applicable)</a>
-        <p>Main description of project. (Problem it solves, what makes it interesting/unique,etc.). Make it both narrative and technical.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.<br><br>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.<br><br>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.<br></p>
+        <h1>Portfolio</h1>
+        <p>A portfolio built as a backend system, not just a website.</p>
+        <a href="PROJECT LINK">Github Repository</a>
+        <br>
+        <br>
         <img src="..." alt="..." width="560" height="315">
-        <iframe src="..." width="560" height="315" muted controls loop autoplay></iframe>
-        
+        <!-- Code for videos <iframe src="..." width="560" height="315" muted controls loop autoplay></iframe> -->
+        <p>This portfolio serves two purposes. First, it showcases my work, experience, projects, and technical interests. Second, and more importantly, it serves as an active, ever-evolving demonstration of my backend development skills. Rather than building a standard static portfolio site, I decided to approach this project much like many frontend developers approach their own portfolios: a direct representation of my technical abilities. To accomplish this, I designed this project around a PostgreSQL database, a FastAPI-powered REST API, and a collection of production-oriented development tools. The site itself functions as a backend project, allowing me to demonstrate concepts such as API development, relational database design, testing, migrations, and maintainability. I plan to continually develop this website, adding new backend technologies as I learn them, making it an evolving representation of my growth as a software developer.<br></p>
+   
         <hr>
 
         <!-- Bullets -->
 
+        <h3><b>Architecture Highlights</b></h3>
+        <ul>
+            <li>Designed around a relational PostgreSQL database rather than static content files</li>
+            <li>Built a REST API using FastAPI to separate application logic from presentation</li>
+            <li>Implemented database versioning through Alembic migrations</li>
+            <li>Implemented automated testing with Pytest to improve reliability</li>
+            <li>Integrated structured logging, SQL admin panel, and other administrative tooling to support maintainability</li>
+        </ul>
+
         <h3><b>Key Features</b></h3>
         <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-            <li>Etc...</li>
+            <li>Dynamic resume page content, served by PostgreSQL database</li>
+            <li>Administrative interface for database testing</li>
+            <li>Automated testing suite for core backend functionality</li>
+            <li>Responsive frontend built with HTMX and Pico.css</li>
         </ul>
-
-        <hr>
-
-        <h3><b>Learning Takeaways</b></h3>
-        <ul>
-            <li>Takeaway 1</li>
-            <li>Takeaway 2</li>
-            <li>Takeaway 3</li>
-            <li>Etc...</li>
-        </ul>
-        <h3><b>Technical Challenges</b></h3>
-        <ul>
-            <li>Challenge 1</li>
-            <li>Challenge 2</li>
-            <li>Challenge 3</li>
-            <li>Etc...</li>
-        </ul>
-
-        <hr>
 
         <h3><b>Tech Stack</b></h3>
         <ul class="tech-stack">
-            <li><span class="devicon-python-plain colored"></span> Python</li>
-            <li><span class="..."></span>...</li>
+            <li><span class="..."></span>Backend</li>
+            <ul>
+                <li><span class="devicon-python-plain colored"></span> Python</li>
+                <li><span class="..."></span>FastAPI</li>
+                <li><span class="..."></span>PostgreSQL</li>
+                <li><span class="..."></span>SQLAlchemy</li>
+                <li><span class="..."></span>Alembic</li>
+                <li><span class="..."></span>Pytest</li>
+            </ul>
+            <li><span class="..."></span>Frontend</li>
+            <ul>
+                <li><span class="..."></span>HTMX <i>(lightweight Javascript framework)</i></li>
+                <li><span class="..."></span>Pico <i>(lightweight CSS framework)</i></li>
+            </ul>
+            <li><span class="..."></span>Tooling</li>
+            <ul>
+                <li><span class="..."></span>Loguru</li>
+                <li><span class="..."></span>Poetry</li>
+                <li><span class="..."></span>SQLAdmin</li>
+                <li><span class="..."></span>Bruno</li>
+            </ul>
         </ul>
+
+        <h3><b>Technical Challenges & Lessons Learned</b></h3>
+        <ul>
+            <li><b>Balancing development speed, learning, and production-oriented development</b></li>
+            <ul>
+                <li>This project required me to learn several new technologies (including SQLAlchemy, Alembic, logging, API testing tools, and database design concepts), all while simultaneously building a functional application. Maintaining development speed while still understanding what I was developing, quickly became one of the project's largest challenges. I addressed this in two key ways. First, I intentionally selected mature, production-grade technologies with straightforward developer experiences. Second, I leveraged AI as both a learning and productivity tool. Rather than blindly generating code, I used the AI to generate boilerplate code, analyzed the code line-by-line, and then modified and the code to fit the project's requirements. This approach allowed me to maintain development momentum while continuing to build a strong foundational understanding of the technologies powering the application.</li>
+            </ul>
+        </ul>
+
+        <hr>
 
 </section>
 
