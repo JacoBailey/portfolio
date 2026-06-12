@@ -73,8 +73,6 @@ class ExperienceBulletAdmin(ModelView, model = ExperienceBullet):
 
 # SQLAdmin Activation
 environment = os.getenv('ENVIRONMENT')
-if environment is None:
-    raise EnvironmentError("No environment env variable found")
 logger.info(f"Environment: {environment}")
 if environment == 'development':
     try:
