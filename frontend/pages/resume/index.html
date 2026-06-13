@@ -9,6 +9,8 @@
 
     <meta name="robots" content="noindex">
 
+    <script src="/assets/js/main.js" defer></script>
+
 </head>
 <body>
 
@@ -49,25 +51,20 @@
 
 <!-- Main Body -->
 
+<h1>Resume</h1>
+<a href="ADD ASSET PATH" download="Resume.pdf" title="Download Resume PDF">
+    <span>Download</span>
+</a> <!-- Resume Download Button -->
+
 <section>
 
     <!-- Projects -->
-
-    <h1>Resume</h1>
-    <a href="ADD ASSET PATH" download="Resume.pdf" title="Download Resume PDF">
-        <span>Download</span>
-    </a> <!-- Resume Download Button -->
     
     <section>
 
         <h2>Projects</h2>
     
-        <h3>PROJECT NAME</h3>
-        <p>PROJECT DESCRIPTION</p>
-        <ul>
-            <li>BULLET</li>
-            <!-- Repeat as needed -->
-        </ul> 
+        <div id="projects-container"></div>
 
     </section>
 
@@ -75,9 +72,7 @@
 
     <section>
         <h2>Technical Skills</h2>
-
-        <p>SKILL: BULLETS</p>
-
+        <div id="skills-container"></div>
     </section>
 
     <!-- Experience -->
@@ -86,12 +81,7 @@
         
         <h2>Experience</h2>
 
-        <h3>POSITION</h3>
-        <p>COMPANY</p>
-        <p><i>DATE RANGE</i></p>
-        <ul>
-            <li>BULLET</li>
-        </ul>
+        <div id="experience-container"></div>
 
     </section>
 
