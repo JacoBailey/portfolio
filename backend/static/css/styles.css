@@ -1,0 +1,321 @@
+/* =========================================
+   HEADER (TOP HEADER "ISLAND")
+========================================= */
+
+/* This is the header island */
+.page-header {
+    padding: 2rem;
+    padding-top: 2.5rem;
+
+    border-radius: 3rem;
+
+    margin: 1rem auto;
+    max-width: 1200px;
+
+    text-align: center;
+
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.15);
+
+    background: rgb(40, 135, 185);
+    /* Unused font coloring
+    color: black;
+    rgb(26, 105, 136) USE THIS AQUAMARINE FOR CUSTOM PICO STYLE
+    */
+}
+
+@media (max-width: 1200px) {
+    .page-header {
+        padding: 0.5rem;
+        padding-top: 2rem;
+
+        margin: 1rem;
+    }
+}
+
+/* Profile Header + Avatar Block
+---------------------------------
+*/
+
+/* Site title and background polygon */
+.site-title {
+    color: white !important;
+    margin: 0;
+    font-size: larger;
+
+    background: rgba(255, 255, 255, 0.253);
+    padding: 0.2rem 1.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.15);
+
+    clip-path: polygon(
+        5% 0,
+        100% 0,
+        95% 100%,
+        0 100%
+        );
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Slim the Jacob Bailey site title margins */
+.header h2 {
+    margin: 0;
+}
+
+.header-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-profession {
+    font-weight: 600;
+    color: white !important;
+}
+
+.header-techstack {
+    font-weight: 200;
+    color: white !important;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    display: block;
+    flex-shrink: 0;
+}
+
+.tagline-block {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.header-divider {
+    width: 90%;
+    border: none !important;
+    height: 3px;
+    background: rgb(155, 157, 169) !important;
+    border-radius: 3rem;
+}
+
+/* Navigation Bar
+-----------------
+*/
+
+#navbar {
+    padding: 1rem;
+    border-radius: 3rem;
+    background: black;
+
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.15);
+    text-align: center;
+}
+
+#navbar details {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+#navbar summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white !important;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+
+    font-size: 1.75rem;
+}
+
+#navbar li {
+    text-align: center;
+}
+
+#navbar a {
+    color: white;
+}
+
+/* Mobile nav */
+@media (max-width: 600px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    #navbar details {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* =========================================
+   BODY CONTENT
+========================================= */
+
+.incognito-link {
+    text-decoration: none;      /* removes underline */
+}
+
+/* Horizontal Rules */
+
+#title-divider {
+    margin: 2rem auto;
+}
+
+.section-divider {
+    margin: 2rem auto;
+    width: 50%;
+}
+
+.contact-divider {
+    margin: 2rem 0; 
+    width: 30%;
+}
+
+.project-section-divider {
+    margin: 2rem 0; 
+    width: 40%;
+}
+
+.resume-section-divider {
+    margin: 2rem 0; 
+    width: 40%;
+}
+
+.project-section-divider-wide {
+    margin: 2rem 0;
+}
+
+/* Reusable Islands */
+
+.techtype {
+    text-align: center;
+}
+
+.techtype-divider {
+    width: 90%;
+    margin: 1rem auto;
+
+    border: none !important;
+    height: 1px;
+    background: rgb(155, 157, 169);
+}
+
+.island {
+    display: inline-block;
+    width: 100%;
+    padding: 1.5rem;
+
+    border-radius: 3rem;
+
+    background: rgb(39, 41, 53);
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,.15);
+}
+
+.projects-island {
+    width: fit-content;
+}
+
+.island-margin {
+    margin: 0.5rem;
+}
+
+.script-techstack-island {
+    width: fit-content;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resume-header h1 {
+    margin: 0;
+    line-height: 1;
+}
+
+.image-frame {
+    display: inline-block;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.image-frame img {
+    display: block;
+    height: auto;
+}
+
+/* Resume Page */
+
+.project-bullet {
+    font-weight: 200;
+}
+
+.skill-bullets {
+    font-weight: 200;
+}
+
+.experience-company {
+    font-style: italic;
+    font-weight: 200;
+}
+
+.experience-daterange {
+    font-weight: 200;
+}
+
+.p-shrink {
+    margin: 0;
+    line-height: 2;
+}
+
+.experience-role {
+    margin: 0;
+    font-weight: 500;
+}
+
+.project-name {
+    font-weight: 500;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    text-align: center;
+}
+
+#footer-divider {
+    margin: 2rem auto;
+    margin-bottom: .25rem;
+}

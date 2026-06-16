@@ -10,98 +10,164 @@
 
     <meta name="robots" content="noindex">
 
+    <!-- STYLESHEETS -->
+
     <!-- Devicons Stylesheet for Tech Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
+    <!-- Pico -->
+    <link rel="stylesheet" href="/assets/css/pico-main/css/pico.min.css">
+
+    <!-- Personal -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
 </head>
 <body>
 
 <!-- Page Header -->
 
-<header>
-    <h2>Jacob Bailey</h2>
-    <h3>Backend Developer | Python, FastAPI, PostgreSQL”</h3>
+<header class="page-header">
+    <!-- OG TITLE TAGLINE
+    <h2 class="incognito-link" id="site-title"><a href="/">Jacob Bailey</a></h2>
+    <h3 id="site-tagline">Backend Developer<i>Python, FastAPI, PostgreSQL</i></h3>
+    -->
+
+    <div class="header">
+
+        <h2>
+            <a class="site-title incognito-link" href="/">Jacob Bailey</a>
+        </h2>
+        <hr class="header-divider">
+        <div class="header-row">
+            <!--
+            <img class="profile-pic" src="/assets/images/profile.png">
+            -->
+            <div class="tagline-block">
+                <h3 class="header-profession">Backend Developer</h3>
+                <h3 class="header-techstack"><i>Python, FastAPI, PostgreSQL</i></h3>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Navigation Menu -->
+    <nav id="navbar">
+        <details>
+            <summary><b>Menu</b></summary>
+            <ul>
+                <li><a href="/" title="Homepage">Home</a></li>
+                <li><a href="/projects/" title="Projects">Projects</a></li>
+                <li><a href="https://github.com/JacoBailey" title="Github">Github</a></li>
+                <li><a href="/resume/" title="Resume">Resume</a></li>
+                <li><a href="/contact/" title="Contact">Contact</a></li>
+            </ul>
+        </details>
+    </nav>
+    
 </header>
-
-<!-- Top Navigation Menu -->
-
-<nav>
-    <ul>
-        
-        <a href="/" title="Homepage">
-            <li>Home</li>
-        </a>
-
-        <a href="/projects/" title="Projects">
-            <li>Projects</li>
-        </a>
-
-        <a href="https://github.com/JacoBailey" title="Github">
-            <li>Github</li>
-        </a>
-
-        <a href="/contact/" title="Contact">
-            <li>Contact</li>
-        </a>
-
-        <a href="/resume/" title="Resume">
-            <li>Resume</li>
-        </a>
-
-    </ul>
-</nav>
 
 <!-- Main Body -->
 
-<section>
+<main class="container">
 
-        <!-- Title, Tagline, Links, Description -->
+    <!-- Breadcrumbs -->
+    
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+        <span><a class="incognito-link" href="/">Home</a> / <a class="incognito-link" href="/projects/">Projects</a> / Text Formatter</span>
+    </nav>
+
+    <br>
+
+    <!-- Title, Tagline, Links, Description -->
+
+    <div>
         <h1>Text Formatter</h1>
-        <p>A convenient bundle of text formatting tools.</p>
-        <a href="https://github.com/JacoBailey/formatter">Github Repository</a>
+        <p><i>A convenient bundle of text formatting tools.</i></p>
+        <a href="https://github.com/JacoBailey/automation-gpt">Github Repository</a>
         <br>
         <br>
-        <img src="/assets/images/Text_Formatter.png" alt="..." width="560" height="315">
+        <div class="image-frame">
+            <img class="image-frame" src="/assets/images/Text_Formatter.png" alt="..." width="560" height="315">
+        </div>
         <!-- Code for videos <iframe src="..." width="560" height="315" muted controls loop autoplay></iframe> -->
-        <p>The “Text Formatter” tool is a modular text-processing utility that provides multiple modes for transforming and formatting text-based string data. The project began as a small script for prepending text to a list of strings (used to format data prior to uploading it to a SaaS platform). Over time, I built additional utilities, including a template-filling tool for structured text generation. As these tools became more related in purpose, I merged them into a single unified program. As my needs evolved, I expanded the project with additional functionality, including modes for regex-based single replacement and multiple replacement string transformations. To support the growing feature set, I refactored the codebase into a modular architecture, consisting of a base program file and separate files for each mode. This refined structure greatly improved maintainability and made it significantly easier to extend functionality with minimal integration overhead.<br></p>
+        <br>
+        <br>
+        <p>The “Text Formatter” tool is a modular text-processing utility that provides multiple modes for transforming and formatting text-based string data. The project began as a small script for prepending text to a list of strings (used to format data prior to uploading it to a SaaS platform). Over time, I built additional utilities, including a template-filling tool for structured text generation. As these tools became more related in purpose, I merged them into a single unified program. As my needs evolved, I expanded the project with additional functionality, including modes for regex-based single replacement and multiple replacement string transformations. To support the growing feature set, I refactored the codebase into a modular architecture, consisting of a base program file and separate files for each mode. This refined structure greatly improved maintainability and made it significantly easier to extend functionality with minimal integration overhead.</p>
+    </div>
+  
+    <br>
+    <hr>
+    <br>
+
+
+    <!-- Bullets -->
+
+    <div>
         
-        <hr>
-
-        <!-- Bullets -->
-
-        <h3><b>Architecture Highlights</b></h3>
-        <ul>
-            <li>Refactored initial monolithic script into a modular architecture separating core logic and individual formatting modes</li>
-            <li>Designed each formatting mode as an isolated module to improve maintainability and reduce coupling</li>
-            <li>Structured system to allow new transformation modes to be added with minimal changes to existing logic</li>
-        </ul>
-
-        <h3><b>Key Features</b></h3>
-        <ul>
-            <li>Format List — Adds a custom prefix or suffix to each item in a list</li>
-            <li>Fill Template — Fills out custom text-based templates with user-defined values</li>
-            <li>Regex Single Replacement — Uses a regex pattern to replace matches in a single string</li>
-            <li>Regex Multiple Replacement — Applies multiple sequential regex replacements to a single string</li>
-        </ul>
-
-        <h3><b>Tech Stack</b></h3>
-        <ul class="tech-stack">
-            <li><span class="devicon-python-plain colored"></span> Python</li>
+        <div>
+            <h3><b>Architecture Highlights</b></h3>
             <ul>
-                <li><span class="...">Regex <i>(re module)</i></span></li>
+                <li>Refactored initial monolithic script into a modular architecture separating core logic and individual formatting modes</li>
+                <li>Designed each formatting mode as an isolated module to improve maintainability and reduce coupling</li>
+                <li>Structured system to allow new transformation modes to be added with minimal changes to existing logic</li>
             </ul>
-        </ul>
+        </div>
 
-        <h3><b>Technical Challenges & Lessons Learned</b></h3>
-        <ul>
-            <li><b>Monolith Architecture Scaling Issues</b></li>
-                <ul>
-                    <li>As I introduced new modes, my codebase slowly evolved into a large, difficult to maintain, monolith. This made it increasingly difficult to maintain and extend the program. To address this, I refactored the system into a modular architecture, consisting of shared base program file and separate modules for each formatting mode. This restructuring significantly improved maintainability and allowed new functionality to be added without modifying existing core logic.</li>
-                </ul>
-        </ul>
+        <hr class="project-section-divider">
 
-</section>
+        <div>
+            <h3><b>Key Features</b></h3>
+            <ul>
+                <li>Format List<span style="font-weight: 100;"> — Adds a custom prefix or suffix to each item in a list</span></li>
+                <li>Fill Template<span style="font-weight: 100;"> — Fills out custom text-based templates with user-defined values</span></li>
+                <li>Regex Single Replacement<span style="font-weight: 100;"> — Uses a regex pattern to replace matches in a single string</span></li>
+                <li>Regex Multiple Replacement<span style="font-weight: 100;"> — Applies multiple sequential regex replacements to a single string</span></li>
+            </ul>
+        </div>
+
+        <hr class="project-section-divider">
+
+        <div>
+            <h3><b>Tech Stack</b></h3>
+            <br>
+            <div class="grid script-techstack-island" id="techstack">
+            
+                <div class="island center">
+                    <h3 class="techtype">Utilities</h3>
+                    <hr class="techtype-divider">
+                    <ul>
+                        <li><span class="devicon-python-plain colored"></span> Python</li>
+                            <ul>
+                            <li style="font-weight: 200;"><span></span>Regex <i>(re module)</i></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr class="project-section-divider">
+
+        <div>
+            <h3><b>Technical Challenges & Lessons Learned</b></h3>
+            <ul>
+                <li><b>Monolith Architecture Scaling Issues</b></li>
+                    <ul>
+                        <li>As I introduced new modes, my codebase slowly evolved into a large, difficult to maintain, monolith. This made it increasingly difficult to maintain and extend the program. To address this, I refactored the system into a modular architecture, consisting of shared base program file and separate modules for each formatting mode. This restructuring significantly improved maintainability and allowed new functionality to be added without modifying existing core logic.</li>
+                    </ul>
+            </ul>    
+        </div>
+
+    </div>
+
+</main>
+
+<!-- Page Footer -->
+
+<hr id="footer-divider">
+<footer class="footer">
+    <p>&copy; 2026 Jacob Bailey</p>
+    <!-- <p><a href="/privacy/">Privacy Policy</a></p> -->
+    <p>Built with: <i style="font-weight: 200;">Python, FastAPI, PostgreSQL, HTML, Javascript (vanilla), and Pico CSS</i></p>
+</footer>
 
 </body>
 </html>

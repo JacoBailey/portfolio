@@ -10,119 +10,191 @@
 
     <meta name="robots" content="noindex">
 
+    <!-- STYLESHEETS -->
+
     <!-- Devicons Stylesheet for Tech Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
+    <!-- Pico -->
+    <link rel="stylesheet" href="/assets/css/pico-main/css/pico.min.css">
+
+    <!-- Personal -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
 </head>
 <body>
 
 <!-- Page Header -->
 
-<header>
-    <h2>Jacob Bailey</h2>
-    <h3>Backend Developer | Python, FastAPI, PostgreSQL”</h3>
+<header class="page-header">
+    <!-- OG TITLE TAGLINE
+    <h2 class="incognito-link" id="site-title"><a href="/">Jacob Bailey</a></h2>
+    <h3 id="site-tagline">Backend Developer<i>Python, FastAPI, PostgreSQL</i></h3>
+    -->
+
+    <div class="header">
+
+        <h2>
+            <a class="site-title incognito-link" href="/">Jacob Bailey</a>
+        </h2>
+        <hr class="header-divider">
+        <div class="header-row">
+            <!--
+            <img class="profile-pic" src="/assets/images/profile.png">
+            -->
+            <div class="tagline-block">
+                <h3 class="header-profession">Backend Developer</h3>
+                <h3 class="header-techstack"><i>Python, FastAPI, PostgreSQL</i></h3>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Navigation Menu -->
+    <nav id="navbar">
+        <details>
+            <summary><b>Menu</b></summary>
+            <ul>
+                <li><a href="/" title="Homepage">Home</a></li>
+                <li><a href="/projects/" title="Projects">Projects</a></li>
+                <li><a href="https://github.com/JacoBailey" title="Github">Github</a></li>
+                <li><a href="/resume/" title="Resume">Resume</a></li>
+                <li><a href="/contact/" title="Contact">Contact</a></li>
+            </ul>
+        </details>
+    </nav>
+    
 </header>
-
-<!-- Top Navigation Menu -->
-
-<nav>
-    <ul>
-        
-        <a href="/" title="Homepage">
-            <li>Home</li>
-        </a>
-
-        <a href="/projects/" title="Projects">
-            <li>Projects</li>
-        </a>
-
-        <a href="https://github.com/JacoBailey" title="Github">
-            <li>Github</li>
-        </a>
-
-        <a href="/contact/" title="Contact">
-            <li>Contact</li>
-        </a>
-
-        <a href="/resume/" title="Resume">
-            <li>Resume</li>
-        </a>
-
-    </ul>
-</nav>
 
 <!-- Main Body -->
 
-<section>
+<main class="container">
 
-        <!-- Title, Tagline, Links, Description -->
+    <!-- Breadcrumbs -->
+    
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+        <span><a class="incognito-link" href="/">Home</a> / <a class="incognito-link" href="/projects/">Projects</a> / ChatGPT Automation</span>
+    </nav>
+    <br>    
+    
+    <!-- Title, Tagline, Links, Description -->
+
+        
+    <div>
         <h1>Portfolio</h1>
-        <p>A portfolio built as a backend system, not just a website.</p>
+        <p><i>A portfolio built as a backend system, not just a website.</i></p>
         <a href="PROJECT LINK">Github Repository</a>
         <br>
         <br>
-        <img src="..." alt="..." width="560" height="315">
+        <div class="image-frame">
+            <img class="image-frame" src="/assets/images/portfolio.png" alt="..." width="560" height="315">
+        </div>
         <!-- Code for videos <iframe src="..." width="560" height="315" muted controls loop autoplay></iframe> -->
-        <p>This portfolio serves two purposes. First, it showcases my work, experience, projects, and technical interests. Second, and more importantly, it serves as an active, ever-evolving demonstration of my backend development skills. Rather than building a standard static portfolio site, I decided to approach this project much like many frontend developers approach their own portfolios: a direct representation of my technical abilities. To accomplish this, I designed this project around a PostgreSQL database, a FastAPI-powered REST API, and a collection of production-oriented development tools. The site itself functions as a backend project, allowing me to demonstrate concepts such as API development, relational database design, testing, migrations, and maintainability. I plan to continually develop this website, adding new backend technologies as I learn them, making it an evolving representation of my growth as a software developer.<br></p>
-   
-        <hr>
+        <br>
+        <br>
+        <p>This portfolio serves two purposes. First, it showcases my work, experience, projects, and technical interests. Second, and more importantly, it serves as an active, ever-evolving demonstration of my backend development skills. Rather than building a standard static portfolio site, I decided to approach this project much like many frontend developers approach their own portfolios: a direct representation of my technical abilities. To accomplish this, I designed this project around a PostgreSQL database, a FastAPI-powered REST API, and a collection of production-oriented development tools. The site itself functions as a backend project, allowing me to demonstrate concepts such as API development, relational database design, testing, migrations, and maintainability. I plan to continually develop this website, adding new backend technologies as I learn them, making it an evolving representation of my growth as a software developer.</p>
+    </div>
 
-        <!-- Bullets -->
+    <br>
+    <hr>
+    <br>
 
-        <h3><b>Architecture Highlights</b></h3>
-        <ul>
-            <li>Designed around a relational PostgreSQL database rather than static content files</li>
-            <li>Built a REST API using FastAPI to separate application logic from presentation</li>
-            <li>Implemented database versioning through Alembic migrations</li>
-            <li>Implemented automated testing with Pytest to improve reliability</li>
-            <li>Integrated structured logging, SQL admin panel, and other administrative tooling to support maintainability</li>
-        </ul>
+    <!-- Bullets -->
 
-        <h3><b>Key Features</b></h3>
-        <ul>
-            <li>Dynamic resume page content, served by PostgreSQL database</li>
-            <li>Administrative interface for database testing</li>
-            <li>Automated testing suite for core backend functionality</li>
-            <li>Responsive frontend built with HTMX and Pico.css</li>
-        </ul>
+    <div>
+        
+        <div>
+            <h3><b>Architecture Highlights</b></h3>
+            <ul>
+                <li>Designed around a relational PostgreSQL database rather than static content files</li>
+                <li>Built a REST API using FastAPI to separate application logic from presentation</li>
+                <li>Implemented database versioning through Alembic migrations</li>
+                <li>Implemented automated testing with Pytest to improve reliability</li>
+                <li>Integrated structured logging, SQL admin panel, and other administrative tooling to support maintainability</li>
+            </ul>
+        </div>
+
+        <hr class="project-section-divider">
+
+        <div>
+            <h3><b>Key Features</b></h3>
+            <ul>
+                <li>Dynamic resume page content, served by PostgreSQL database</li>
+                <li>Administrative interface for database testing</li>
+                <li>Automated testing suite for core backend functionality</li>
+                <li>Responsive frontend built with JavaScript <i style="font-weight: 200;">(vanilla)</i> and Pico <i style="font-weight: 200;">(lightweight css framework)</i></li>
+            </ul>
+        </div>
+
+        <hr class="project-section-divider-wide">
 
         <h3><b>Tech Stack</b></h3>
-        <ul class="tech-stack">
-            <li><span class="..."></span>Backend</li>
-            <ul>
-                <li><span class="devicon-python-plain colored"></span> Python</li>
-                <li><span class="..."></span>FastAPI</li>
-                <li><span class="..."></span>PostgreSQL</li>
-                <li><span class="..."></span>SQLAlchemy</li>
-                <li><span class="..."></span>Alembic</li>
-                <li><span class="..."></span>Pytest</li>
-            </ul>
-            <li><span class="..."></span>Frontend</li>
-            <ul>
-                <li><span class="..."></span>HTMX <i>(lightweight Javascript framework)</i></li>
-                <li><span class="..."></span>Pico <i>(lightweight CSS framework)</i></li>
-            </ul>
-            <li><span class="..."></span>Tooling</li>
-            <ul>
-                <li><span class="..."></span>Loguru</li>
-                <li><span class="..."></span>Poetry</li>
-                <li><span class="..."></span>SQLAdmin</li>
-                <li><span class="..."></span>Bruno</li>
-            </ul>
-        </ul>
 
-        <h3><b>Technical Challenges & Lessons Learned</b></h3>
-        <ul>
-            <li><b>Balancing development speed, learning, and production-oriented development</b></li>
-            <ul>
-                <li>This project required me to learn several new technologies (including SQLAlchemy, Alembic, logging, API testing tools, and database design concepts), all while simultaneously building a functional application. Maintaining development speed while still understanding what I was developing, quickly became one of the project's largest challenges. I addressed this in two key ways. First, I intentionally selected mature, production-grade technologies with straightforward developer experiences. Second, I leveraged AI as both a learning and productivity tool. Rather than blindly generating code, I used the AI to generate boilerplate code, analyzed the code line-by-line, and then modified and the code to fit the project's requirements. This approach allowed me to maintain development momentum while continuing to build a strong foundational understanding of the technologies powering the application.</li>
+        <br>
+
+        <div class="grid" id="techstack">
+        
+            <div class="island center">
+                <h3 class="techtype">Backend</h3>
+                <hr class="techtype-divider">
+                <ul>
+                    <li><span class="devicon-python-plain colored"></span> Python</li>
+                    <li><span class="devicon-fastapi-plain colored"></span> FastAPI</li>
+                    <li><span class="devicon-postgresql-plain colored"></span> PostgreSQL</li>
+                    <li><span class="devicon-sqlalchemy-plain"></span> SQLAlchemy</li>
+                    <li><span></span>Alembic</li>
+                    <li><span class="devicon-pytest-plain colored"></span> Pytest</li>
             </ul>
-        </ul>
+            </div>
 
-        <hr>
+            <div class="island">
+                <h3 class="techtype">Frontend</h3>
+                <hr class="techtype-divider">
+                <ul>
+                    <li><span class="devicon-html5-plain colored"></span> HTML</li>
+                    <li><span class="devicon-javascript-plain colored"></span> Javascript <i style="font-weight: 200;">(vanilla)</i></li>
+                    <li><span></span>Pico <i style="font-weight: 200;">(lightweight CSS framework)</i></li>
+                </ul>
+            </div>
 
-</section>
+            <div class="island">
+                <h3 class="techtype">Tooling</h3>
+                <hr class="techtype-divider">
+                <ul>
+                    <li><span></span>Loguru</li>
+                    <li><span class="devicon-poetry-plain colored"></span>Poetry</li>
+                    <li><span></span>SQLAdmin</li>
+                    <li><span></span>Bruno</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!---->
+
+        <hr class="project-section-divider-wide">
+
+        <div>
+            <h3><b>Technical Challenges & Lessons Learned</b></h3>
+            <ul>
+                <li><b>Balancing development speed, learning, and production-oriented development</b></li>
+                <ul>
+                    <li>This project required me to learn several new technologies (including SQLAlchemy, Alembic, logging, API testing tools, and database design concepts), all while simultaneously building a functional application. Maintaining development speed while still understanding what I was developing, quickly became one of the project's largest challenges. I addressed this in two key ways. First, I intentionally selected mature, production-grade technologies with straightforward developer experiences. Second, I leveraged AI as both a learning and productivity tool. Rather than blindly generating code, I used the AI to generate boilerplate code, analyzed the code line-by-line, and then modified and the code to fit the project's requirements. This approach allowed me to maintain development momentum while continuing to build a strong foundational understanding of the technologies powering the application.</li>
+                </ul>
+            </ul>
+        </div>
+
+    </div>
+
+</main>
+
+<!-- Page Footer -->
+
+<hr id="footer-divider">
+<footer class="footer">
+    <p>&copy; 2026 Jacob Bailey</p>
+    <!-- <p><a href="/privacy/">Privacy Policy</a></p> -->
+    <p>Built with: <i style="font-weight: 200;">Python, FastAPI, PostgreSQL, HTML, Javascript (vanilla), and Pico CSS</i></p>
+</footer>
 
 </body>
 </html>

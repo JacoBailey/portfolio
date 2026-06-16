@@ -10,105 +10,170 @@
 
     <meta name="robots" content="noindex">
 
+    <!-- STYLESHEETS -->
+
     <!-- Devicons Stylesheet for Tech Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
+    <!-- Pico -->
+    <link rel="stylesheet" href="/assets/css/pico-main/css/pico.min.css">
+
+    <!-- Personal -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
 </head>
+
 <body>
 
 <!-- Page Header -->
 
-<header>
-    <h2>Jacob Bailey</h2>
-    <h3>Backend Developer | Python, FastAPI, PostgreSQL”</h3>
+<header class="page-header">
+    <!-- OG TITLE TAGLINE
+    <h2 class="incognito-link" id="site-title"><a href="/">Jacob Bailey</a></h2>
+    <h3 id="site-tagline">Backend Developer<i>Python, FastAPI, PostgreSQL</i></h3>
+    -->
+
+    <div class="header">
+
+        <h2>
+            <a class="site-title incognito-link" href="/">Jacob Bailey</a>
+        </h2>
+        <hr class="header-divider">
+        <div class="header-row">
+            <!--
+            <img class="profile-pic" src="/assets/images/profile.png">
+            -->
+            <div class="tagline-block">
+                <h3 class="header-profession">Backend Developer</h3>
+                <h3 class="header-techstack"><i>Python, FastAPI, PostgreSQL</i></h3>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Navigation Menu -->
+    <nav id="navbar">
+        <details>
+            <summary><b>Menu</b></summary>
+            <ul>
+                <li><a href="/" title="Homepage">Home</a></li>
+                <li><a href="/projects/" title="Projects">Projects</a></li>
+                <li><a href="https://github.com/JacoBailey" title="Github">Github</a></li>
+                <li><a href="/resume/" title="Resume">Resume</a></li>
+                <li><a href="/contact/" title="Contact">Contact</a></li>
+            </ul>
+        </details>
+    </nav>
+    
 </header>
-
-<!-- Top Navigation Menu -->
-
-<nav>
-    <ul>
-        
-        <a href="/" title="Homepage">
-            <li>Home</li>
-        </a>
-
-        <a href="/projects/" title="Projects">
-            <li>Projects</li>
-        </a>
-
-        <a href="https://github.com/JacoBailey" title="Github">
-            <li>Github</li>
-        </a>
-
-        <a href="/contact/" title="Contact">
-            <li>Contact</li>
-        </a>
-
-        <a href="/resume/" title="Resume">
-            <li>Resume</li>
-        </a>
-
-    </ul>
-</nav>
 
 <!-- Main Body -->
 
-<section>
+<main class="container">
 
-        <!-- Title, Tagline, Links, Description -->
+    <!-- Breadcrumbs -->
+    
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+        <span><a class="incognito-link" href="/">Home</a> / <a class="incognito-link" href="/projects/">Projects</a> / ChatGPT Automation</span>
+    </nav>
+
+    <br>
+
+    <!-- Title, Tagline, Links, Description -->
+
+    <div>
         <h1>ChatGPT Automation</h1>
-        <p>Automate repetitive LLM workflows, with ease.</p>
+        <p><i>Automate repetitive LLM workflows, with ease.</i></p>
         <a href="https://github.com/JacoBailey/automation-gpt">Github Repository</a>
         <br>
         <br>
-        <img src="/assets/images/ChatGPT_Automation.jpg" alt="..." width="560" height="315">
+        <div class="image-frame">
+            <img class="image-frame" src="/assets/images/ChatGPT_Automation.jpg" alt="..." width="560" height="315">
+        </div>
         <!-- Code for videos <iframe src="..." width="560" height="315" muted controls loop autoplay></iframe> -->
-        <p>The “ChatGPT Prompt Automation” tool automates repetitive ChatGPT workflows through the use of user-provided prompt templates, simple input handling, and web automation. In my SEO role, I often use ChatGPT to create skeleton drafts for SEO site content. Manually filling in these templates, submitting the prompts, and waiting for the response for each piece of content quickly became repetitive and time-consuming. This project was built to both streamline and automate that workflow. The tool allows users to define templates with a simple placeholder syntax, the program then automatically fills the template, submits the prompt to ChatGPT, and returns the response. The user only needs to select the prompt template and provide inputs for each placeholder; all execution is automated. Under the hood, it uses regex for parsing the template and SeleniumBase for the browser automation and interaction handling.<br></p>
-   
-        <hr>
+        <br>
+        <br>
+        <p>The “ChatGPT Prompt Automation” tool automates repetitive ChatGPT workflows through the use of user-provided prompt templates, simple input handling, and web automation. In my SEO role, I often use ChatGPT to create skeleton drafts for SEO site content. Manually filling in these templates, submitting the prompts, and waiting for the response for each piece of content quickly became repetitive and time-consuming. This project was built to both streamline and automate that workflow. The tool allows users to define templates with a simple placeholder syntax, the program then automatically fills the template, submits the prompt to ChatGPT, and returns the response. The user only needs to select the prompt template and provide inputs for each placeholder; all execution is automated. Under the hood, it uses regex for parsing the template and SeleniumBase for the browser automation and interaction handling.</p>
+    </div>
+    
+    <br>
+    <hr>
+    <br>
 
-        <!-- Bullets -->
+    <!-- Bullets -->
 
-        <h3><b>Architecture Highlights</b></h3>
-        <ul>
-            <li>Regex-based template parsing system for dynamic prompt injection</li>
-            <li>SeleniumBase automation layer to manage browser interaction and improve reliability</li>
-        </ul>
+    <div>
+        
+        <div>
+            <h3><b>Architecture Highlights</b></h3>
+            <ul>
+                <li>Regex-based template parsing system for dynamic prompt injection</li>
+                <li>SeleniumBase automation layer to manage browser interaction and improve reliability</li>
+            </ul>
+        </div>
 
-        <h3><b>Key Features</b></h3>
-        <ul>
-            <li>Custom user-provided templates</li>
-            <li>Simple syntax for template inputs</li>
-            <li>Automated prompt submission and response retrieval</li>
-        </ul>
+        <hr class="project-section-divider">
+
+        <div>
+            <h3><b>Key Features</b></h3>
+            <ul>
+                <li>Custom user-provided templates</li>
+                <li>Simple syntax for template inputs</li>
+                <li>Automated prompt submission and response retrieval</li>
+            </ul>
+        </div>
+
+        <hr class="project-section-divider">
 
         <h3><b>Tech Stack</b></h3>
-        <ul class="tech-stack">
-            <li><span class="devicon-python-plain colored"></span> Python</li>
-            <ul>
-                <li><span class="..."></span>Regex <i>(re module)</i></li>
-                <li><span class="..."></span>SeleniumBase <i>(browser automation)</i></li>
-            </ul>
-        </ul>
 
-        <h3><b>Technical Challenges & Lessons Learned</b></h3>
-        <ul>
-            <li><b>Automation Resistance</b></li>
-            <ul>
-                <li>ChatGPT's interface changes and additional security measures made reliable automation difficult. I addressed this issue by transitioning from Selenium to SeleniumBase (which has superior bot-protection handling) and by using more thoughtful DOM interaction strategies, more human-like automation behavior, and simplified automation steps.</li>
-            </ul>
-        </ul>
-        <ul>
-            <li><b>DOM + Selector Instability</b></li>
-            <ul>
-                <li>Frequent changes to ChatGPT's DOM caused selectors to regularly break. To improve the automation reliability, I initially created a multiple selector class (to check for the existence of multiple selectors). Later, I improved my approach by utilizing more precise selector choices.</li>
-            </ul>
-        </ul>
+        <br>
 
-        <hr>
+        <div class="grid script-techstack-island" id="techstack">
+        
+            <div class="island center">
+                <h3 class="techtype">Utilities</h3>
+                <hr class="techtype-divider">
+                <ul>
+                    <li><span class="devicon-python-plain colored"></span> Python</li>
+                        <ul>
+                        <li style="font-weight: 200;"><span></span>Regex <i>(re module)</i></li>
+                        <li style="font-weight: 200;"><span class="devicon-selenium-original colored"></span> SeleniumBase <i>(browser automation)</i></li>
+                    </ul>
+                </ul>
+            </div>
 
-</section>
+        </div>
+
+        <hr class="project-section-divider">
+
+        <div>
+            <h3><b>Technical Challenges & Lessons Learned</b></h3>
+            <ul>
+                <li><b>Automation Resistance</b></li>
+                <ul>
+                    <li>ChatGPT's interface changes and additional security measures made reliable automation difficult. I addressed this issue by transitioning from Selenium to SeleniumBase (which has superior bot-protection handling) and by using more thoughtful DOM interaction strategies, more human-like automation behavior, and simplified automation steps.</li>
+                </ul>
+            </ul>
+            <ul>
+                <li><b>DOM + Selector Instability</b></li>
+                <ul>
+                    <li>Frequent changes to ChatGPT's DOM caused selectors to regularly break. To improve the automation reliability, I initially created a multiple selector class (to check for the existence of multiple selectors). Later, I improved my approach by utilizing more precise selector choices.</li>
+                </ul>
+            </ul>
+        </div>
+
+    </div>
+
+</main>
+
+<!-- Page Footer -->
+
+<hr id="footer-divider">
+<footer class="footer">
+    <p>&copy; 2026 Jacob Bailey</p>
+    <!-- <p><a href="/privacy/">Privacy Policy</a></p> -->
+    <p>Built with: <i style="font-weight: 200;">Python, FastAPI, PostgreSQL, HTML, Javascript (vanilla), and Pico CSS</i></p>
+</footer>
 
 </body>
 </html>

@@ -9,73 +9,114 @@
 
     <meta name="robots" content="noindex">
 
+    <!-- STYLESHEETS -->
+
     <!-- Devicons Stylesheet for Tech Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Pico -->
+    <link rel="stylesheet" href="/assets/css/pico-main/css/pico.min.css">
+
+    <!-- Personal -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
 </head>
 <body>
 
 <!-- Page Header -->
 
-<header>
-    <h2>Jacob Bailey</h2>
-    <h3>Backend Developer | Python, FastAPI, PostgreSQL”</h3>
+<header class="page-header">
+    <!-- OG TITLE TAGLINE
+    <h2 class="incognito-link" id="site-title"><a href="/">Jacob Bailey</a></h2>
+    <h3 id="site-tagline">Backend Developer<i>Python, FastAPI, PostgreSQL</i></h3>
+    -->
+
+    <div class="header">
+
+        <h2>
+            <a class="site-title incognito-link" href="/">Jacob Bailey</a>
+        </h2>
+        <hr class="header-divider">
+        <div class="header-row">
+            <!--
+            <img class="profile-pic" src="/assets/images/profile.png">
+            -->
+            <div class="tagline-block">
+                <h3 class="header-profession">Backend Developer</h3>
+                <h3 class="header-techstack"><i>Python, FastAPI, PostgreSQL</i></h3>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Navigation Menu -->
+    <nav id="navbar">
+        <details>
+            <summary><b>Menu</b></summary>
+            <ul>
+                <li><a href="/" title="Homepage">Home</a></li>
+                <li><a href="/projects/" title="Projects">Projects</a></li>
+                <li><a href="https://github.com/JacoBailey" title="Github">Github</a></li>
+                <li><a href="/resume/" title="Resume">Resume</a></li>
+                <li><a href="/contact/" title="Contact">Contact</a></li>
+            </ul>
+        </details>
+    </nav>
+    
 </header>
-
-<!-- Top Navigation Menu -->
-
-<nav>
-    <ul>
-        
-        <a href="/" title="Homepage">
-            <li>Home</li>
-        </a>
-
-        <a href="/projects/" title="Projects">
-            <li>Projects</li>
-        </a>
-
-        <a href="https://github.com/JacoBailey" title="Github">
-            <li>Github</li>
-        </a>
-
-        <a href="/contact/" title="Contact">
-            <li>Contact</li>
-        </a>
-
-        <a href="/resume/" title="Resume">
-            <li>Resume</li>
-        </a>
-
-    </ul>
-</nav>
 
 <!-- Main Body -->
 
-<h1>Homepage</h1>
+<main class="container resume">
 
-<section>
+    <!-- Breadcrumbs -->
+
+    <!-- 
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+        <a href="/">Home</a> /
+        <a href="/projects/">Projects</a> /
+        <span>Portfolio</span>
+    </nav>
+    <br>
+    -->
 
     <!-- Introduction / Hero -->
+
+    <h1>Homepage</h1>
+
+    <hr id="title-divider">
 
     <section>
 
         <h2>Introduction</h2>
-        <p>Howdy! 👋 My name is Jacob Bailey. I'm a Backend Developer from Los Angeles, California, with a background in Technical SEO. I specialize in building Python REST APIs using FastAPI, PostgreSQL databases and SQLAlchemy. My professional interests include system design, database architecture, and containerization. My current focus is securing a full-time role as a junior backend developer.</p>
+
+        <br>
+
+        <div>
+            <p>Howdy! 👋 My name is Jacob Bailey. I'm a Backend Developer from Los Angeles, California, with a background in Technical SEO. I specialize in building Python REST APIs using FastAPI, PostgreSQL databases and SQLAlchemy. My professional interests include system design, database architecture, and containerization. My current focus is securing a full-time role as a junior backend developer.</p>
+        </div>
 
     </section>
+
+    <hr class="section-divider">
 
     <!-- Journey -->
 
     <section>
 
         <h2>Journey</h2>
-        <p>My backend development journey started before I ever learned to code. I have always had a technical and detail-oriented mindset, an interest in complex systems, a self-driven desire to learn, and a knack for logic and problem solving.
-        <br><br>In 2020, I graduated college with a degree in marketing, but wasn't sure exactly what I wanted to do with it. After some research, I became interested in Search Engine Optimization. So, I began teaching myself SEO using free videos and online courses and eventually found myself working as the sole SEO specialist for a large, publicly-traded company. During my time in SEO, I found myself most enjoying the technical tasks, including optimizing site performance, writing regex patterns, and developing JSON schemas. This, paired with a close friend nudging me to learn to code, led me to pursue backend software development.
-        <br><br>So, in 2022 I began teaching myself programming. Over the past 4 years, I have developed a strong foundation in backend development, including REST APIs, relational databases, ORMs, and even a bit of containerization. In fact, this very portfolio represents my first complete website backend using Python, FastAPI, SQLAlchemy, and Alembic.  Today, I am greatly looking forward to continuing my growth through larger projects and a career in backend web development.
-        </p>
+
+        <br>
+
+        <div>
+            <p>My backend development journey started before I ever learned to code. I have always had a technical and detail-oriented mindset, an interest in complex systems, a self-driven desire to learn, and a knack for logic and problem solving.
+            <br><br>In 2020, I graduated college with a degree in marketing, but wasn't sure exactly what I wanted to do with it. After some research, I became interested in Search Engine Optimization. So, I began teaching myself SEO using free videos and online courses and eventually found myself working as the sole SEO specialist for a large, publicly-traded company. During my time in SEO, I found myself most enjoying the technical tasks, including optimizing site performance, writing regex patterns, and developing JSON schemas. This, paired with a close friend nudging me to learn to code, led me to pursue backend software development.
+            <br><br>So, in 2022 I began teaching myself programming. Over the past 4 years, I have developed a strong foundation in backend development, including REST APIs, relational databases, ORMs, and even a bit of containerization. In fact, this very portfolio represents my first complete website backend using Python, FastAPI, SQLAlchemy, and Alembic.  Today, I am greatly looking forward to continuing my growth through larger projects and a career in backend web development.
+            </p>
+        </div>
 
     </section>
+
+    <hr class="section-divider">
 
     <!-- Technical Interests -->
 
@@ -83,74 +124,140 @@
 
         <h2>Technical Interests</h2>
 
-        <h3>System Design</h3>
-        <p>Improving the maintainability and readability of my code is one of my leading priorities as a developer. Breaking down complex systems into manageable components, improving system efficiency and scalability, and emphasizing robust security practices are all front and center for my contributions to any codebase.</p>
+        <br>
 
-        <h3>API Development</h3>
-        <p>Creating and managing REST APIs has been one of my favorite skill acquisitions since I began to code. Managing data flow can often pose quite a technical challenge, but using REST APIs with intentional endpoint design, thoughtful request validation, and clear request/response contracts makes it a rewarding development process. </p>
+        <div>        
+            <div>
+                <h3>System Design</h3>
+                <p>Improving the maintainability and readability of my code is one of my leading priorities as a developer. Breaking down complex systems into manageable components, improving system efficiency and scalability, and emphasizing robust security practices are all front and center for my contributions to any codebase.</p>
+            </div>
 
-        <h3>Containerization</h3>
-        <p>So far, I have only used containerization in a limited capacity, but its ability to significantly reduce the chance of environment issues between users, codebases, and servers is amazing; it greatly reduces unnecessary friction in the development process. I am also interested in how both containerization and orchestration tools can simplify deployment, scaling, and application management, particularly across complex environments.</p>
+            <br>
 
-        <h3>Database Architecture</h3>
-        <p>Databases interest me because they sit at the center of nearly every application. I enjoy learning how schema design, normalization, and relationships can simplify complex systems while improving maintainability and data integrity. Understanding how small design decisions can improve scalability, performance, and developer experience is an area I have enjoyed exploring.</p>
+            <div>
+                <h3>API Development</h3>
+                <p>Creating and managing REST APIs has been one of my favorite skill acquisitions since I began to code. Managing data flow can often pose quite a technical challenge, but using REST APIs with intentional endpoint design, thoughtful request validation, and clear request/response contracts makes it a rewarding development process. </p>
+            </div>
+
+            <br>
+    
+            <div>
+                <h3>Containerization</h3>
+                <p>So far, I have only used containerization in a limited capacity, but its ability to significantly reduce the chance of environment issues between users, codebases, and servers is amazing; it greatly reduces unnecessary friction in the development process. I am also interested in how both containerization and orchestration tools can simplify deployment, scaling, and application management, particularly across complex environments.</p>
+            </div>
+
+            <br>
+
+            <div>
+                <h3>Database Architecture</h3>
+                <p>Databases interest me because they sit at the center of nearly every application. I enjoy learning how schema design, normalization, and relationships can simplify complex systems while improving maintainability and data integrity. Understanding how small design decisions can improve scalability, performance, and developer experience is an area I have enjoyed exploring.</p>
+            </div>
+        </div>
 
     </section>
+
+    <hr class="section-divider">
 
     <!-- Tech Stack -->
 
     <section>
 
-        <h2 class="tech-stack"><b>Tech Stack</b></h2>
+        <h2><b>Tech Stack</b></h2>
+
+        <br>
+
+        <div class="grid" id="techstack">
         
-        <h3 class="...">Backend</h3>
-        <ul>
-            <li><span class="devicon-python-plain colored"></span> Python</li>
-            <li><span class="..."></span>FastAPI</li>
-            <li><span class="..."></span>REST APIs</li>
-            <li><span class="..."></span>Pytest</li>
-        </ul>
-        <h3 class="...">Database</h3>
-        <ul>
-            <li><span class="..."></span>PostgreSQL</li>
-            <li><span class="..."></span>SQLAlchemy</li>
-            <li><span class="..."></span>Alembic</li>
-        </ul>
-        <h3 class="...">DevOps</h3>
-        <ul>
-            <li><span class="..."></span>Docker</li>
-            <li><span class="..."></span>Git</li>
-        </ul>
+            <div class="island center">
+                <h3 class="techtype">Backend</h3>
+                <hr class="techtype-divider">
+                <ul>
+                    <li><span class="devicon-python-plain colored"></span> Python</li>
+                    <li><span class="devicon-fastapi-plain colored"></span> FastAPI</li>
+                    <li><span class="devicon-pytest-plain colored"></span> Pytest</li>
+                    <li><span></span>REST APIs</li>
+                </ul>
+            </div>
+
+            <div class="island">
+                <h3 class="techtype">Database</h3>
+                <hr class="techtype-divider">
+                <ul>
+                    <li><span class="devicon-postgresql-plain colored"></span> PostgreSQL</li>
+                    <li><span class="devicon-sqlalchemy-plain"></span> SQLAlchemy</li>
+                    <li><span></span>Alembic</li>
+                </ul>
+            </div>
+
+            <div class="island">
+                <h3 class="techtype">DevOps</h3>
+                <hr class="techtype-divider">
+                <ul>
+                    <li><span class="devicon-docker-plain colored"></span> Docker</li>
+                    <li><span class="devicon-git-plain colored"></span> Git</li>
+                </ul>
+            </div>
+
+        </div>
 
     </section>
+
+    <hr class="section-divider">
 
     <!-- Featured Projects -->
 
     <section>
 
         <h2 class="featured-projects"><b>Featured Projects</b></h2>
+
+        <br>
         
-        <a href="/projects/portfolio/" title="Portfolio">
-            <h2>Portfolio</h2>
-        </a>
-        <p>A portfolio built as a backend system, not just a website.</p>
-        <img src="..." alt="..." width="560" height="315">
+        <div class="grid">
 
-        <a href="/projects/chatgpt-automation/" title="ChatGPT Automation">
-            <h2>ChatGPT Automation</h2>
-        </a>
-        <p>Automate repetitive LLM workflows, with ease.</p>
-        <img src="/assets/images/ChatGPT_Automation.jpg" alt="..." width="560" height="315">
+            <div class="island">
+                <a class="incognito-link" href="/projects/portfolio/" title="Portfolio">
+                    <h3>Portfolio</h3>
+                    <p>A portfolio built as a backend system, not just a website.</p>
+                    <div class="image-frame">
+                        <img class="image-frame" src="/assets/images/portfolio.png" alt="..." width="560" height="315">
+                    </div>
+                </a>
+            </div>
 
-        <a href="/projects/text-formatter/" title="Text Formatter">
-            <h2>Text Formatter</h2>
-        </a>
-        <p>A convenient bundle of text formatting tools.</p>
-        <img src="/assets/images/Text_Formatter.png" alt="..." width="560" height="315">
+            <div class="island">
+                <a class="incognito-link" href="/projects/chatgpt-automation/" title="ChatGPT Automation">
+                    <h3>ChatGPT Automation</h3>
+                    <p>Automate repetitive LLM workflows, with ease.</p>
+                    <div class="image-frame">
+                        <img class="image-frame" src="/assets/images/ChatGPT_Automation.jpg" alt="..." width="560" height="315">
+                    </div>
+                </a>
+            </div>
+
+            <div class="island">
+                <a class="incognito-link" href="/projects/text-formatter/" title="Text Formatter">
+                    <h3>Text Formatter</h3>
+                    <p>A convenient bundle of text formatting tools.</p>
+                    <div class="image-frame">
+                        <img class="image-frame" src="/assets/images/Text_Formatter.png" alt="..." width="560" height="315">
+                    </div>
+                </a>
+            </div>
+
+        </div>
 
     </section>
 
-</section>
+</main>
+
+<!-- Page Footer -->
+
+<hr id="footer-divider">
+<footer class="footer">
+    <p>&copy; 2026 Jacob Bailey</p>
+    <!-- <p><a href="/privacy/">Privacy Policy</a></p> -->
+    <p>Built with: <i style="font-weight: 200;">Python, FastAPI, PostgreSQL, HTML, Javascript (vanilla), and Pico CSS</i></p>
+</footer>
 
 </body>
 </html>

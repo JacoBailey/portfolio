@@ -9,78 +9,122 @@
 
     <meta name="robots" content="noindex">
 
+    <!-- STYLESHEETS -->
+
     <!-- Devicons Stylesheet for Tech Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
+    <!-- Pico -->
+    <link rel="stylesheet" href="/assets/css/pico-main/css/pico.min.css">
+
+    <!-- Personal -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
 
 </head>
 <body>
 
-
 <!-- Page Header -->
 
-<header>
-    <h2>Jacob Bailey</h2>
-    <h3>Backend Developer | Python, FastAPI, PostgreSQL”</h3>
+<header class="page-header">
+    <!-- OG TITLE TAGLINE
+    <h2 class="incognito-link" id="site-title"><a href="/">Jacob Bailey</a></h2>
+    <h3 id="site-tagline">Backend Developer<i>Python, FastAPI, PostgreSQL</i></h3>
+    -->
+
+    <div class="header">
+
+        <h2>
+            <a class="site-title incognito-link" href="/">Jacob Bailey</a>
+        </h2>
+        <hr class="header-divider">
+        <div class="header-row">
+            <!--
+            <img class="profile-pic" src="/assets/images/profile.png">
+            -->
+            <div class="tagline-block">
+                <h3 class="header-profession">Backend Developer</h3>
+                <h3 class="header-techstack"><i>Python, FastAPI, PostgreSQL</i></h3>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Navigation Menu -->
+    <nav id="navbar">
+        <details>
+            <summary><b>Menu</b></summary>
+            <ul>
+                <li><a href="/" title="Homepage">Home</a></li>
+                <li><a href="/projects/" title="Projects">Projects</a></li>
+                <li><a href="https://github.com/JacoBailey" title="Github">Github</a></li>
+                <li><a href="/resume/" title="Resume">Resume</a></li>
+                <li><a href="/contact/" title="Contact">Contact</a></li>
+            </ul>
+        </details>
+    </nav>
+    
 </header>
-
-<!-- Top Navigation Menu -->
-
-<nav>
-    <ul>
-        
-        <a href="/" title="Homepage">
-            <li>Home</li>
-        </a>
-
-        <a href="" title="Projects">
-            <li>Projects</li>
-        </a>
-
-        <a href="" title="Github">
-            <li><a href="https://github.com/JacoBailey">Github</a></li>
-        </a>
-
-        <a href="" title="Contact">
-            <li>Contact</li>
-        </a>
-
-        <a href="/resume/" title="Resume">
-            <li>Resume</li>
-        </a>
-
-    </ul>
-</nav>
 
 <!-- Main Body -->
 
-<h1>Contact</h1>
-
-<section>
+<main class="container">
         
-        <p>Jacob Bailey</p>
-        <p>Backend Developer | Python, FastAPI, PostgreSQL”</p>
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+        <span><a class="incognito-link" href="/">Home</a> / Contact</span>
+    </nav>
+
+    <br>
+
+    <h1>Contact</h1>
+
+    <hr id="title-divider">
+    
+    <div>
+        <div><b>Jacob Bailey</b></div>
+        <p class="p-shrink"><strong style="font-weight: 450;">Backend Developer: </strong><i style="font-weight: 200;"> Python, FastAPI, PostgreSQL</i></p>
+        <p><strong style="font-weight: 450;">Location: </strong><span style="font-weight: 200;">Los Angeles, CA</span></p>
+    </div>
+
+    <hr class="contact-divider">
+
+    <div>
+        <p class="p-shrink"><b>LinkedIn</b></p>
+        <br>
+        <a href="https://www.linkedin.com/in/jacobailey/" role="button">LinkedIn</a>
+    </div>
+
+    <hr class="contact-divider">
+    
+    <div>
+        <p class="p-shrink"><b>Email:</b>
+            <span id="email-address" style="font-weight: 200;">jacobrbailey@icloud.com</span>
+        </p>
+        <br>
+        <a href="mailto:jacobrbailey@icloud.com" role="button">Email me</a>
+        <button class="outline" onclick="navigator.clipboard.writeText(document.getElementById('email-address').innerText)">Copy Email</button>
+    </div>
+
+    <hr class="contact-divider">
+
+    <div>
+        <p class="p-shrink"><b>Phone:</b>
+            <span id="phone-number" style="font-weight: 200;">+1 (209) 256-2509</span>
+        </p>
+        <br>
+        <a href="tel:+12092562509" role="button">Call me</a>
+        <button class="outline" onclick="navigator.clipboard.writeText(document.getElementById('phone-number').innerText)">Copy Number</button>
+    </div>
         
-        <p>Location: Los Angeles, CA</p>
+</main>
 
-        <p>LinkedIn: 
-            <a href="https://www.linkedin.com/in/jacobailey/">Click Here</a>
-        </p>
-        
-        <p>Email: 
-            <span id="email-addresss">jacobrbailey@icloud.com
-            </span>
-        </p>
-        <a href="mailto:jacobrbailey@icloud.com">Email me</a>
-        <button onlcick="navigator.clipboard.writeText(document.getElementById('email-addresss').innerText)">Copy Email</button>
+<!-- Page Footer -->
 
-        <p>Phone: 
-            <span id="phone-number">+1 (209) 256-2509</span>
-        </p>
-        <a href="tel:+12092562509">Call me</a>
-        <button onlcick="navigator.clipboard.writeText(document.getElementById('phone-number').innerText)">Copy Number</button>
-
-</section>
+<hr id="footer-divider">
+<footer class="footer">
+    <p>&copy; 2026 Jacob Bailey</p>
+    <!-- <p><a href="/privacy/">Privacy Policy</a></p> -->
+    <p>Built with: <i style="font-weight: 200;">Python, FastAPI, PostgreSQL, HTML, Javascript (vanilla), and Pico CSS</i></p>
+</footer>
 
 </body>
 </html>

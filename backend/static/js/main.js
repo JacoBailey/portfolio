@@ -19,9 +19,9 @@ function renderProjects(projects) {
   const container = document.getElementById("projects-container");
   
   container.innerHTML = projects.map(project => `
-    <div class="project-block">
+    <div class="project-block island grid island-margin">
         <h3 class="project-name">${project.name}</h3>
-        <div class="project-description">${project.description}</div>
+        <p class="project-description">${project.description}</p>
         <ul class="project-bullets-container">${project.bullets
             .sort((a,b) => a.order_index - b.order_index)
             .map(bullet => `<li class="project-bullet">${bullet.text}</li>`)
@@ -66,8 +66,8 @@ function renderSkills(skills) {
   const container = document.getElementById("skills-container");
   
   container.innerHTML = skills.map(skill => `
-    <div class="skill-block">
-      <span class="skill-name">${skill.name}: </span>
+    <p class="skill-block island grid">
+      <strong class="skill-name">${skill.name}: </strong>
       <span class="skill-bullets">
         ${skill.bullets
           .sort((a, b) => a.order_index - b.order_index)
@@ -75,7 +75,7 @@ function renderSkills(skills) {
           .join(", ")
         }
       </span>
-    </div>
+    </p>
   `).join("");
 }
 
@@ -114,17 +114,17 @@ function renderExperience(experiences) {
   const container = document.getElementById("experience-container");
   
   container.innerHTML = experiences.map(experience => `
-        <div class="experience-block">
+        <div class="experience-block island grid island-margin">
             <h3 class="experience-role">${experience.role}</h3>
-            <div class="experience-company">${experience.company}</div>
-            <div class="experience-daterange">${experience.start_date} - ${experience.end_date}</div>
+            <p class="experience-company p-shrink">${experience.company}</p>
+            <p class="experience-daterange" p-shrink>${experience.start_date} - ${experience.end_date}</p>
             <ul class="experience-bullets-container">${experience.bullets
                 .sort((a, b) => a.order_index - b.order_index)
                 .map(bullet => `<li class="experience-bullet">${bullet.text}</li>`)
                 .join("")
             }</ul>
         </div>
-  `).join("");
+  `).join("<br>");
 }
 
 // Init

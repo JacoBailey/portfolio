@@ -11,81 +11,138 @@
 
     <script src="/assets/js/main.js" defer></script>
 
+    <!-- STYLESHEETS -->
+
+    <!-- Devicons Stylesheet for Tech Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Pico -->
+    <link rel="stylesheet" href="/assets/css/pico-main/css/pico.min.css">
+
+    <!-- Personal -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+
 </head>
 <body>
 
 <!-- Page Header -->
 
-<header>
-    <h2>Jacob Bailey</h2>
-    <h3>Backend Developer | Python, FastAPI, PostgreSQL”</h3>
+<header class="page-header">
+    <!-- OG TITLE TAGLINE
+    <h2 class="incognito-link" id="site-title"><a href="/">Jacob Bailey</a></h2>
+    <h3 id="site-tagline">Backend Developer<i>Python, FastAPI, PostgreSQL</i></h3>
+    -->
+
+    <div class="header">
+
+        <h2>
+            <a class="site-title incognito-link" href="/">Jacob Bailey</a>
+        </h2>
+        <hr class="header-divider">
+        <div class="header-row">
+            <!--
+            <img class="profile-pic" src="/assets/images/profile.png">
+            -->
+            <div class="tagline-block">
+                <h3 class="header-profession">Backend Developer</h3>
+                <h3 class="header-techstack"><i>Python, FastAPI, PostgreSQL</i></h3>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Navigation Menu -->
+    <nav id="navbar">
+        <details>
+            <summary><b>Menu</b></summary>
+            <ul>
+                <li><a href="/" title="Homepage">Home</a></li>
+                <li><a href="/projects/" title="Projects">Projects</a></li>
+                <li><a href="https://github.com/JacoBailey" title="Github">Github</a></li>
+                <li><a href="/resume/" title="Resume">Resume</a></li>
+                <li><a href="/contact/" title="Contact">Contact</a></li>
+            </ul>
+        </details>
+    </nav>
+    
 </header>
-
-<!-- Top Navigation Menu -->
-
-<nav>
-    <ul>
-        
-        <a href="/" title="Homepage">
-            <li>Home</li>
-        </a>
-
-        <a href="/projects/" title="Projects">
-            <li>Projects</li>
-        </a>
-
-        <a href="https://github.com/JacoBailey" title="Github">
-            <li>Github</li>
-        </a>
-
-        <a href="/contact/" title="Contact">
-            <li>Contact</li>
-        </a>
-
-        <a href="/resume/" title="Resume">
-            <li>Resume</li>
-        </a>
-
-    </ul>
-</nav>
 
 <!-- Main Body -->
 
-<h1>Resume</h1>
-<a href="ADD ASSET PATH" download="Resume.pdf" title="Download Resume PDF">
-    <span>Download</span>
-</a> <!-- Resume Download Button -->
+<main class="container">
 
-<section>
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+        <span><a class="incognito-link" href="/">Home</a> / Resume</span>
+    </nav>
 
-    <!-- Projects -->
-    
+    <br>
+
     <section>
 
-        <h2>Projects</h2>
-    
-        <div id="projects-container"></div>
+        <div class="resume-header">
+            <h1>Resume</h1>
+            <a href="ADD ASSET PATH" download="Resume.pdf" title="Download Resume PDF" role="button">Download</a> <!-- Resume Download Button -->
+        </div>
 
     </section>
 
-    <!-- Technical Skills -->
+    <hr id="title-divider">
 
     <section>
-        <h2>Technical Skills</h2>
-        <div id="skills-container"></div>
-    </section>
 
-    <!-- Experience -->
-
-    <section>
+        <!-- Projects -->
         
-        <h2>Experience</h2>
+        <section>
 
-        <div id="experience-container"></div>
+            <h2>Projects</h2>
+
+            <br>
+        
+            <div id="projects-container"></div>
+
+        </section>
+
+        <hr class="resume-section-divider">
+
+        <!-- Technical Skills -->
+
+        <section>
+            
+            <h2>Technical Skills</h2>
+
+            <br>
+
+            <div id="skills-container"></div>
+
+        </section>
+
+        <hr class="resume-section-divider">
+
+        <!-- Experience -->
+
+        <section>
+            
+            <h2>Experience</h2>
+
+            <br>
+
+            <div id="experience-container"></div>
+
+        </section>
 
     </section>
 
-</section>
+</main>
+
+<!-- Page Footer -->
+
+<hr id="footer-divider">
+<footer class="footer">
+    <p>&copy; 2026 Jacob Bailey</p>
+    <!-- <p><a href="/privacy/">Privacy Policy</a></p> -->
+    <p>Built with: <i style="font-weight: 200;">Python, FastAPI, PostgreSQL, HTML, Javascript (vanilla), and Pico CSS</i></p>
+</footer>
 
 </body>
 </html>
