@@ -9,7 +9,7 @@ class Project(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[str] = mapped_column(String(50), nullable=False)
-    description: Mapped[str] = mapped_column(String(200), nullable=False)
+    description: Mapped[str] = mapped_column(String(300), nullable=False)
     
     bullets: Mapped[list["ProjectBullet"]] = relationship(
         back_populates="project",
@@ -22,7 +22,7 @@ class ProjectBullet(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     project_id: Mapped[int] = mapped_column(ForeignKey("projects.id"))
-    text: Mapped[str] = mapped_column(String(150), nullable=False)
+    text: Mapped[str] = mapped_column(String(300), nullable=False)
     order_index: Mapped[int] = mapped_column(Integer, nullable=False)
     
     __table_args__ = (
@@ -42,7 +42,7 @@ class TechnicalSkill(Base):
     __tablename__ = "technical_skills"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    name: Mapped[str] = mapped_column(String(50), nullable=False)
+    name: Mapped[str] = mapped_column(String(100), nullable=False)
     
     bullets: Mapped[list["TechnicalBullet"]] = relationship(
         back_populates="skill",
@@ -55,7 +55,7 @@ class TechnicalBullet(Base):
     
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     skill_id: Mapped[int] = mapped_column(ForeignKey("technical_skills.id"))
-    text: Mapped[str] = mapped_column(String(150), nullable=False)
+    text: Mapped[str] = mapped_column(String(300), nullable=False)
     order_index: Mapped[int] = mapped_column(Integer, nullable=False)
     
     __table_args__ = (
@@ -76,7 +76,7 @@ class Experience(Base):
     __tablename__ = "experiences"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    role: Mapped[str] = mapped_column(String(100), nullable=False)
+    role: Mapped[str] = mapped_column(String(150), nullable=False)
     company: Mapped[str] = mapped_column(String(100), nullable=False)
     # dates below are set to text so values such as "Present" may be included
     start_date: Mapped[str] = mapped_column(String(50), nullable=False)
@@ -93,7 +93,7 @@ class ExperienceBullet(Base):
     
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     experience_id: Mapped[int] = mapped_column(ForeignKey("experiences.id"))
-    text: Mapped[str] = mapped_column(String(150), nullable=False)
+    text: Mapped[str] = mapped_column(String(300), nullable=False)
     order_index: Mapped[int] = mapped_column(Integer, nullable=False)
     
     __table_args__ = (
