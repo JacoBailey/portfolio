@@ -285,8 +285,8 @@
 }
 
 .experience-company {
-    font-style: italic;
-    font-weight: 200;
+    font-style: oblique;
+    font-weight: 400;
 }
 
 .experience-daterange {
@@ -306,6 +306,10 @@
 .project-name {
     font-weight: 500;
 }
+
+.project-description {
+    font-style: oblique;
+};
 
 /* =========================================
    FOOTER
